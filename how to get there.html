@@ -16,11 +16,36 @@
             line-height: 1.15; /* Line spacing set to 1.15 */
         }
         header {
-            background-color: #CBA135; /* Satin 
-          */
+            background-color: #CBA135; /* Satin */
             padding: 10px;
             text-align: center;
             color: white;
+            position: relative; /* Make header relative to position the navbar */
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #b8860b;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #aa7d09; /* Slightly darker gold */
+            color: white;
+        }
+        .header-content {
+            margin-top: 60px; /* Adjust for navbar height */
         }
         .container {
             max-width: 800px;
@@ -77,7 +102,16 @@
 <body>
 
     <header>
-        <h1>Transfer Options</h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-content">
+            <h1>Transfer Options</h1>
+        </div>
     </header>
 
     <div class="container">
@@ -151,9 +185,7 @@
             <h3>Payment Methods:</h3>
             <ul>
                 <li><strong>Bank Transfer:</strong> You can transfer the ticket payment to our bank account via bank transfer, which typically takes 3-4 working days to process. Please note that you'll need to cover any associated bank fees. Once we've received the payment, we'll proceed to pay the airline and purchase your ticket.</li>
-                <li><strong>
-                  </li>
-                  Credit Card Payment:</strong> We can provide you with a payment link for credit card payment through our bank. However, please note that a 3.5% bank fee will be added to the payable amount. Once we receive your payment, we'll proceed to pay the airline and purchase your ticket.</li>
+                <li><strong>Credit Card Payment:</strong> We can provide you with a payment link for credit card payment through our bank. However, please note that a 3.5% bank fee will be added to the payable amount. Once we receive your payment, we'll proceed to pay the airline and purchase your ticket.</li>
             </ul>
 
             <h3>Regular Flight Schedule:</h3>
@@ -207,3 +239,4 @@
 
 </body>
 </html>
+
