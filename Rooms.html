@@ -35,16 +35,27 @@
         .large-image img {
             width: 100%;
             height: auto;
-            max-height: 300px;
+            max-height: 500px;
             object-fit: cover;
             border-radius: 8px;
         }
         .thumbnails {
             display: flex;
+            overflow-x: auto; /* Allows horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Enables snap scrolling */
             margin-top: 10px;
             padding: 0;
-            overflow-x: auto; /* Allows horizontal scrolling if needed */
-            white-space: nowrap; /* Ensures thumbnails stay in a single line */
+            width: 100%;
+            justify-content: justify; /* Center the thumbnails */
+            gap: 5px; /* Adds space between thumbnails */
+            
+        }
+        .thumbnails::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for webkit browsers */
+        }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center; /* Center the thumbnails inside the container */
         }
         .thumbnails img {
             height: 75px;
@@ -54,7 +65,7 @@
             cursor: pointer;
             border: 2px solid #ddd;
             border-radius: 4px;
-            display: inline-block; /* Ensures images are displayed inline */
+            scroll-snap-align: start; /* Snap to start of each image */
         }
         .thumbnails img.active {
             border-color: #333;
@@ -62,7 +73,7 @@
         .amenities {
             margin-top: 15px;
             font-size: 14px;
-            text-align: left;
+            text-align: center;
             line-height: 1.6;
         }
         .amenities span {
@@ -80,13 +91,15 @@
                     <img id="large-image-202" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%201.jpeg" alt="Family Room with Balcony">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%202.JPG" alt="Thumbnail 2" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%203.jpeg" alt="Thumbnail 3" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%204.JPG" alt="Thumbnail 3" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%205.JPG" alt="Thumbnail 3" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%206.JPG" alt="Thumbnail 3" data-large-image="large-image-202">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%207.JPG" alt="Thumbnail 3" data-large-image="large-image-202">
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%202.JPG" alt="Thumbnail 2" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/202%20Family%20Room%203.jpeg" alt="Thumbnail 3" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%204.JPG" alt="Thumbnail 4" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%205.JPG" alt="Thumbnail 5" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%206.JPG" alt="Thumbnail 6" data-large-image="large-image-202">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/202%20Family%20Room%207.JPG" alt="Thumbnail 7" data-large-image="large-image-202">
+                    </div>
                 </div>
             </div>
             <p class="amenities">
@@ -102,18 +115,19 @@
                     <img id="large-image-203" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%201.jpg" alt="Double Room with Balcony">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%201.jpg" alt="Thumbnail 2" data-large-image="large-image-203">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%202.jpg" alt="Thumbnail 2" data-large-image="large-image-203">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%203.jpg" alt="Thumbnail 2" data-large-image="large-image-203">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%204.jpg" alt="Thumbnail 2" data-large-image="large-image-203">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%205.jpeg" alt="Thumbnail 2" data-large-image="large-image-203">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%206.jpeg" alt="Thumbnail 2" data-large-image="large-image-203">
-
-
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%201.jpg" alt="Thumbnail 1" data-large-image="large-image-203">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%202.jpg" alt="Thumbnail 2" data-large-image="large-image-203">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%203.jpg" alt="Thumbnail 3" data-large-image="large-image-203">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%204.jpg" alt="Thumbnail 4" data-large-image="large-image-203">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%205.jpeg" alt="Thumbnail 5" data-large-image="large-image-203">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/a0f096eef9d2303d03fb13f3145608e94a0c7e2e/Images%E2%80%9C/203%20Image%206.jpeg" alt="Thumbnail 6" data-large-image="large-image-203">
+                        
+                    </div>
                 </div>
             </div>
             <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Balcony. (Room is located on first floor) | 1 Private bathroom with outdoor shower | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
+                1 Large double bed or 2 Single Beds | Air conditioning | Balcony | Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request | Electric kettle | Wardrobe or closet | Free WiFi
             </p>
         </div>
 
@@ -122,49 +136,67 @@
             <h2>Double Room with Garden View (101)</h2>
             <div class="image-gallery">
                 <div class="large-image">
-                    <img id="large-image-101" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/101%20Double%20Room%20with%20Garden%20View%201.jpeg" alt="Double Room with Garden View">
+                    <img id="large-image-101" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/101%20Image%201.jpg" alt="Double Room with Garden View">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/101%20Double%20Room%20with%20Garden%20View%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-101">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/101%20Double%20Room%20with%20Garden%20View%202.JPG" alt="Thumbnail 2" data-large-image="large-image-101">
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/101%20Image%201.jpg" alt="Thumbnail 1" data-large-image="large-image-101">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/101%20Image%202.jpg" alt="Thumbnail 2" data-large-image="large-image-101">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/101%20Image%203.jpg" alt="Thumbnail 3" data-large-image="large-image-101">
+                        
+                    </div>
                 </div>
             </div>
             <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Varenda. (Room is located on ground floor) | 1 Private bathroom (one outdoor shower) | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
+                1 Large double bed or 2 Single Beds | Air conditioning | Garden View | Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request | Electric kettle | Wardrobe or closet | Free WiFi
             </p>
         </div>
 
-        <!-- Double Room with Balcony & outdoor shower (201) -->
+        <!-- Double Room with Balcony & Outdoor Shower (201) -->
         <div class="room">
-            <h2>Double Room with Balcony & outdoor shower (201)</h2>
+            <h2>Double Room with Balcony & Outdoor Shower (201)</h2>
             <div class="image-gallery">
                 <div class="large-image">
-                    <img id="large-image-201" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/201%20Double%20Room%20with%20Balcony%20and%20Outdoor%20Shower%201.jpeg" alt="Double Room with Balcony & outdoor shower">
+                    <img id="large-image-201" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%201.jpeg" alt="Double Room with Balcony & Outdoor Shower">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/201%20Double%20Room%20with%20Balcony%20and%20Outdoor%20Shower%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-201">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/201%20Double%20Room%20with%20Balcony%20and%20Outdoor%20Shower%202.JPG" alt="Thumbnail 2" data-large-image="large-image-201">
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-201">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%202.jpeg" alt="Thumbnail 2" data-large-image="large-image-201">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%203.jpeg" alt="Thumbnail 3" data-large-image="large-image-201">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%204.jpeg" alt="Thumbnail 4" data-large-image="large-image-201">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%205.jpeg" alt="Thumbnail 5" data-large-image="large-image-201">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/201%20Image%206.jpeg" alt="Thumbnail 6" data-large-image="large-image-201">
+                        
+                    </div>
                 </div>
             </div>
             <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Balcony. (Room is located on first floor) | 1 Private bathroom with outdoor shower | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
+                1 Large double bed or 2 Single Beds | Air conditioning | Balcony | Outdoor Shower | Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request | Electric kettle | Wardrobe or closet | Free WiFi
             </p>
         </div>
 
-        <!-- Double Room with Garden View & outdoor shower (102) -->
+        <!-- Double Room with Garden View & Outdoor Shower (102) -->
         <div class="room">
-            <h2>Double Room with Garden View & outdoor shower (102)</h2>
+            <h2>Double Room with Garden View & Outdoor Shower (102)</h2>
             <div class="image-gallery">
                 <div class="large-image">
-                    <img id="large-image-102" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/102%20Double%20Room%20with%20Garden%20View%20and%20Outdoor%20Shower%201.jpeg" alt="Double Room with Garden View & outdoor shower">
+                    <img id="large-image-102" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%201.jpeg" alt="Double Room with Garden View & Outdoor Shower">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/102%20Double%20Room%20with%20Garden%20View%20and%20Outdoor%20Shower%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-102">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/102%20Double%20Room%20with%20Garden%20View%20and%20Outdoor%20Shower%202.JPG" alt="Thumbnail 2" data-large-image="large-image-102">
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%202.jpeg" alt="Thumbnail 2" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%203.jpeg" alt="Thumbnail 3" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%205.JPG" alt="Thumbnail 4" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%204.JPG" alt="Thumbnail 5" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%206.JPG" alt="Thumbnail 6" data-large-image="large-image-102">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/102%20Room%207.JPG" alt="Thumbnail 7" data-large-image="large-image-102">
+                    </div>
                 </div>
             </div>
             <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Varenda. (Room is located on ground floor) | 1 Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
+                1 Large double bed or 2 Single Beds | Air conditioning | Garden View | Outdoor Shower | Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request | Electric kettle | Wardrobe or closet | Free WiFi
             </p>
         </div>
 
@@ -173,42 +205,31 @@
             <h2>Standard Double Room (103)</h2>
             <div class="image-gallery">
                 <div class="large-image">
-                    <img id="large-image-103" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/103%20Standard%20Double%20Room%201.jpeg" alt="Standard Double Room">
+                    <img id="large-image-103" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%201.JPG" alt="Standard Double Room">
                 </div>
                 <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/103%20Standard%20Double%20Room%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-103">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/103%20Standard%20Double%20Room%202.JPG" alt="Thumbnail 2" data-large-image="large-image-103">
+                    <div class="thumbnail-container">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%201.JPG" alt="Thumbnail 1" data-large-image="large-image-103">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%202.JPG" alt="Thumbnail 2" data-large-image="large-image-103">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%203.JPG" alt="Thumbnail 3" data-large-image="large-image-103">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%204.JPG" alt="Thumbnail 4" data-large-image="large-image-103">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%205.JPG" alt="Thumbnail 5" data-large-image="large-image-103">
+                        <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/55fb57624a219b891cea56fffb791a3bc1ed4743/Images%E2%80%9C/103%20Image%206.JPG" alt="Thumbnail 6" data-large-image="large-image-103">
+                    </div>
                 </div>
             </div>
             <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Varenda. (Room is located on ground floor) | 1 Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
-            </p>
-        </div>
-
-        <!-- Double Room (100) -->
-        <div class="room">
-            <h2>Double Room (100)</h2>
-            <div class="image-gallery">
-                <div class="large-image">
-                    <img id="large-image-100" src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/100%20Double%20Room%201.jpeg" alt="Double Room">
-                </div>
-                <div class="thumbnails">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/100%20Double%20Room%201.jpeg" alt="Thumbnail 1" data-large-image="large-image-100">
-                    <img src="https://rawcdn.githack.com/rindalimaldives/rindalimaldives.github.io/f0abcbed0ed571869d9d3c5033846bf3a0ef5482/100%20Double%20Room%202.JPG" alt="Thumbnail 2" data-large-image="large-image-100">
-                </div>
-            </div>
-            <p class="amenities">
-                1 Large double bed or 2 Single Beds | Air conditioning | Varenda. (Room is located on ground floor) | 1 Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request. | Electric kettle | Wardrobe or closet | Free WiFi
+                1 Large double bed or 2 Single Beds | Air conditioning | Private bathroom | Hot Water | Shower Gel and Shampoo | Safety deposit box | Bath Towel | Beach Towel | Toilet paper | Bed Linen | Socket near the bed | Tile floor | Private entrance | Iron and Iron board upon request | Electric kettle | Wardrobe or closet | Free WiFi
             </p>
         </div>
     </div>
     <script>
-        document.querySelectorAll('.thumbnails img').forEach(img => {
-            img.addEventListener('click', function() {
-                var largeImage = document.getElementById(this.dataset.largeImage);
+        const thumbnails = document.querySelectorAll('.thumbnail-container img');
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const largeImageId = this.getAttribute('data-large-image');
+                const largeImage = document.getElementById(largeImageId);
                 largeImage.src = this.src;
-                document.querySelectorAll('.thumbnails img').forEach(thumb => thumb.classList.remove('active'));
-                this.classList.add('active');
             });
         });
     </script>
