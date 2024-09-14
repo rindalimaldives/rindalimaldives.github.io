@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive List</title>
+    <link href="https://fonts.cdnfonts.com/css/calibri-light" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Calibri Light', sans-serif;
+        }
+        .content {
+            display: none;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .heading {
+            cursor: pointer;
+            color: #b4850f; /* Modify this color as needed */
+            text-decoration: underline;
+            font-size: 18px; /* Modify font size as needed */
+        }
+        .content p {
+            text-align: justify;
+            line-height: 1.5; /* 1.5 line spacing between paragraphs */
+            margin-bottom: 10px; /* Space between paragraphs */
+        }
+        .subheading {
+            font-size: 16px;
+            text-decoration: underline;
+            margin-top: 20px;
+            text-align: left; /* Align text to the left */
+        }
+        ul {
+            list-style-type: disc; /* Bullet points */
+            margin-left: 20px; /* Indent the list */
+            padding-left: 20px; /* Ensure the list is indented properly */
+        }
+    </style>
+</head>
+<body>
+    <h1>Important Informations</h1>
+    
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content1')">Maldives – An Introduction</div>
+        <div id="content1" class="content">
+            <p>The Maldives in located in the Indian Ocean, about 500 KM from the southern tips of both India. It is the Ideal exotic tropical island paradise.</p>
+            <p>Independant since 1965, and a republic since 1968, the Maldives is a member of the United Nations, the Commonwealth and the Non-Aligned Movement. It maintains a very cordial relationship with the international community. Under the leaderships of both Maumoon Abdul Gayoom and Mohamed Nasheed, the country is a champion of global peace and perservation of the environment.</p>
+            <p>The population of the country currently stands at 2005 est about 300,000. A common language (Dhivehi) and religion (Islam) unite the people into cohesive, peaceful society. The country has been inhabited for atleast 25 centuries.</p>
+            <p>The Maldives comprises about 1190 islands grouped into atolls protected by surrounding coral reefs. Coconut palms and various tropical plants grow in abundance on most islands.</p>
+            <p>The Maldives straddles the equator and has a tropical climate. The southwest monsoon brings most of the rain, mostly around June and July. Normally, the skies are clear during the northeast monsoon.</p>
+            <p>As of early 1970’s tourism has burgeoned in the Maldives. Surfers, divers, beach buffs, game fisherman and sea lovers find the Maldives ideal.</p>
+            <p>The Maldives has increasingly become extremely accessible, especially by air. Scheduled and charter flights operate on a regular basis from points of origin in Europe, the Middle East and Asia. Visitors are issued thirty day visa on arrival. Apart from normal Customs and Port Health formalities, nothing stands in the way of the inbound guest and tropical holiday.</p>
+        </div>
+    </div>
+    
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content2')">Geography and Climate</div>
+        <div id="content2" class="content">
+            <p>The Maldives is an archipelago of about 1190 islands grouped into natural coral atolls.</p>
+            <p>One would expect the Indian Ocean, like any of the other oceans of the world to have its waves and other phenomena related to large bodies of water. The Indian Ocean does fulfill this expectation till one begins to approach any of the coral atolls right in the middle of it.</p>
+            <p>An atoll is best visualized as a series of concentric layers. The outermost layer of the atoll is a strong reef. Composed of coral debris and living coral, this reef is a formidable barrier against rough seas. Once you gain access into the calm waters within, one is within the lagoon of the atoll proper.</p>
+            <p>The islands of the atoll follow the outer reef. Sometimes an occasional island juts up from inside the lagoon.</p>
+            <p>Each island has its own fringing reef. This adds to the protection. The water within this reef is often quite shallow. This aquamarine halo around the island in your picture postcard is this.</p>
+            <p>Even though the islands of the Maldives are well sheltered from the oceanic waves, the ocean plays a major role in the climate of the country. It acts as a heat buffer, storing and giving up heat at a much slower rate than solid ground. Temperatures usually fluctuate between 23 degree Celsius and a maximum of 32 degree Celsius. There is always a cooling breeze blowing from the sea.</p>
+            <p>The Maldives straddles the equator and lies outside the Indian Ocean cyclone belt.</p>
+            <p>Some people find the Maldivian climate too monotonous. Length of the day never varies. Normally in June and July, the southwest monsoon is said to bring rain.</p>
+            
+            <div class="subheading">Land Information:</div>
+            <ul>
+                <li>Subsided volcano type coral atoll.</li>
+                <li>Strong fringe reef round each natural atoll.</li>
+                <li>Channels or breaks in fringe reef provide access to inner atoll.</li>
+                <li>Islands normally set at a slight distance parallel to fringe reef.</li>
+                <li>Some isolated islands in central lagoon.</li>
+                <li>Each island has a house reef. Water within house reef very shallow.</li>
+                <li>Islands consist of coral debris ground into fine white sand.</li>
+                <li>Highest point above sea level 1.5m.</li>
+            </ul>
+
+            <div class="subheading">Climate:</div>
+            <ul>
+                <li>Equatorial day = night cycle.</li>
+                <li>No seasons.</li>
+                <li>Two regional monsoons (SW & NW); SW brings rain.</li>
+                <li>Temperature: max 32 degree C, min 23 degree C, norm 30 degree C.</li>
+                <li>Sea provides “buffer”. Cooling sea breezes.</li>
+                <li>Humidity normally high.</li>
+                <li>Unpredictable tropical showers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content3')">History, Religion & Culture</div>
+        <div id="content3" class="content">
+            <p>The Maldives have been inhabited for atleast 2500 years. Visited and enriched over the centuries by contact with sailors from all over, the country has evolved its unique culture.</p>
+                <p>Before the Maldives converted to Islam in 1153 AD, Buddism was the prevalent religion. Ruins of stupas and other temples still exist to attest to this.</p>
+                    <p>The Maldives has always been a very peaceful place apart from a few skirmishes with foreign invaders. The Portuguese, for example, occupied the nation for about 17 years in the 17th Century.</p>
+                        <p>From 1887 to 1965, the Maldives was a British Protectorate. Since then, the Maldives has been a sovereign state.
+                            <p>Since conversion to Islam, the Maldives remained a Sultanate till the proclamation of the First Republic in 1953. It failed. The Sultanate returned till the Second Republic was proclaimed in 1968. This time, it lasted.</p>
+                                <p>Maldivian culture is unique and practical phenomenon born of the fisherfolk, the adventurer on the high seas, and the always-welcome guest. Binding this whole is a unique Sanskrit-driven language (called Dhivehi) and the Islamic faith.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content4')">The People and the Language</div>
+        <div id="content4" class="content">
+            <p>Where did the people and the language of the Maldives come from?</p>
+                <p></p>It is not recorded when and by whom the Maldives was first settled. However, archeological evidence and a look at the only language spoken in the country (called Dhivehi) tell an interesting story!</p>
+                <p></p>The languages of the Maldives’ immediate neighbours are predominantly Dravidian (with the sole exception of Sinhala, which is spoken by the Sinhalese community in Sri Lanka), the Dhivehi language is Sanskrit based. Linguistic evidence clearly indicates this.</p>
+                <p></p>Before conversion to Islam in 1153 AD, the predominant religion in the Maldives was Buddism (again something shared with the Sinhala-speakers of Sri Lanka, Sinhala being a Sanskrit-derived language as well). This, along with forklore and legend, points strongly to an Aryan migration from the ancient civilizations of MOhenjodaro and Harappa, at a time circa 500 BC.</p>
+                <p></p>Things never remained that simple. The Maldives is placed right at the traders’ crossroads of the Indian Ocean. Daring seafarers from all around the known world often found respite on these islands. Some never left. All made their own contributions to the society and the gene pool of the people.</p>
+                <p></p>As Maldivians themselves traveled far and wide, they brought home exotic products and left behind records of their visits. The documented visits made to the court of Roman Emperor Julian in 362 AD and visits to the court of Tang Dynasty Emperor of China in 658 AD are good examples.</p>
+                <p></p>Maldivians later traveled to Bengal, Malaysia and the rest of Asia. This brought in strong influxes of these languages. Conversion to Islam brought in Arabic and Persian elements. The Portuguese who overcame the Maldives in the 16th Century added theirs. Maldivians sought education in Indian universities in the 18th Century brought Urdu and Hindi. In the 19th Century, British Empire contributed English.</p>
+                <p></p>Maldivians have always welcomed and accomodated visitors who came in peace. Isolation was never practised. Cultural and other benificial influences were assimilated. Only threats to independence were repelled.</p>
+                <p></p>The Maldives continues to remain a unified country witha unique culture and unique language with its own script, literature and history.
+                .</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content5')">Arriving in the Maldives</div>
+        <div id="content5" class="content">
+            <p>What should you expect on arrival?
+                <p></p>The first surprise: Male’ International Airport is an island by itself! Next your holiday starts right here. A 30-day tourist visa is granted on arrival. If Port Health is satisfied that you have not been through any countries with serious cantagion, you are in.
+                <p></p>After luggage retrieval, do note that there is no Green Channel. All passengers’ luggage is screened, normally electronically. Keep the keys handy in case a manual inspection is called for. You maybe asked whether you have any movies or CD’s. Answer all questions in a straight forward manner.
+                <p></p>After Immigration and Customs proceed to arrivals. A representative of your host will normally receive you. If no one meets you or if you need a reservation please approach the Maldives Tourism Promotion Board Counter.
+                <p></p>After reception, a quick boat or seaplane will take you to your adventure in the Maldives.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content6')">Transport in the Maldives</div>
+        <div id="content6" class="content">
+            <p>You would expect plenty of boats in the Maldives… Rightly so! The Maldives cannot survive without boats and there are many. Let us first look at a few.</p>
+            <p>The star performer is the traditional and ubiquitous dhoni. Each traditional dhoni is a unique vessel hand-built by a master craftsman even though mass-produced fiberglass versions have recently been introduced. Built of strong wooden planks, shaped round a strong wooden frame, the dhoni is built to sail in all seas. They are used as fishing vessels and as inter-island ferries throughout the Maldives. Traditionally sporting a versatile lateen sail, the dhoni has also married well with the marine diesel engine and has become the workhorse of even the tourism industry.</p>
+            <p>Then there is the speedboat. In a country where the international airport is on an island all by itself, where the entire tourist resorts are on separate islands, the speedboat reigns king. It also performs well in recreation.</p>
+            <p>Getting around in the Maldives is not restricted to a boat though. Seaplanes offer an even faster and scenic alternative, especially to distant resorts.</p>
+            <p>On some of the bigger islands, especially on the capital island of Male’, the latest sports cars compete with motorcycles, scooters, and the sedate taxi.</p>
+
+            <div class="subheading">Sea:</div>
+            <ul>
+                <li>Speedboats – Airport to hotel transfer. Recreational (including water-skiing).</li>
+                <li>Passenger Ferries – Larger vessels, often fast and air-conditioned.</li>
+                <li>Cargo Vessels – Normally diesel-powered, slow.</li>
+                <li>Dhoni – Versatile and adaptable workhorse of the sea. Very seaworthy.</li>
+                <li>Wind Surfers – Special mention. Inter-island travel banned.</li>
+            </ul>
+
+            <div class="subheading">Air:</div>
+            <ul>
+                <li>Float Planes – Inter-island passenger ferry. Fast, comfortable.</li>
+                <li>Airplanes – Restricted to where runways are available.</li>
+            </ul>
+
+            <div class="subheading">Land:</div>
+            <ul>
+                <li>Cars – On larger islands. Taxis are available.</li>
+                <li>Other Light Vehicles – On larger islands. Often available for hire.</li>
+                <li>Trucks – Normally used for heavy-duty work.</li>
+                <li>Motorcycles/Scooters – Used as a convenience. Normally not available for hire.</li>
+                <li>Bicycles – Ubiquitous. Normally not available for hire. Some models sold for as cheap as US$ 60.00.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content7')">Communication</div>
+        <div id="content7" class="content">
+            <p>When on holiday at paradise, you are still expected to remain in touch. Communication remains vital.
+                <p>When in the Maldives, communication with the rest of the world is very easy. All resorts and most local islands have everything from international direct dial phone and fax service and access to the internet. Most cruising vessels offer wireless phone service.
+                    <p>The mobile telephone network is fast expanding. Prepaid kits and roaming service is also available.
+                        <p>One the sea, most cruising vessels offer wireless phone service. VHF radio fills in for the rest.
+                            <p>If you are a serious communications buff, try
+                                <p>www.dhivehinet.net.mv 
+                                    <p>www.ooredoo.mv
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content8')">Clothing</div>
+        <div id="content8" class="content">
+            <p>A tropical island paradise also has a few bare essentials.
+                <p></p>Official regulation do not allow public nudity anywhere in the Maldives. Even on privately booked safari vessels, decent bikinis and swimming trunks are needed.
+                <p></p>Wear decent swimwear. Avoid offending one’s fellow holidaymakers. At in-house restaurants, bars and the like, use casual tropical wear. Light cotton worn with light sandals work beutifully.
+                <p></p>When visiting inhabited islands, please wear garments that cover your body from torso to the knees. If you plan to make any formal visits locally, wear formal.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content9')">Health, Safety & Medical Emergencies</div>
+        <div id="content9" class="content">
+            <p>Here are a few tips about your holiday health
+                <p></p>Before you travel, tell your travel agent permanant disabilities or chronic conditions when you make your booking. Bring with you any devices that you depend upon. Also bring a good supply of medications you are dependant on. Back these up with a valid prescription in case Customs needs it or if you need a refill.
+                <p></p>Avoid travelling through countries in which dangerous diseases have been reported.
+                <p></p>Next be careful, where you eat or drink. Registered food and beverage outlets in the country are usually safe. avoid raw fruit and vegitables from dubious sorces.
+                <p></p>If you need medical attention, alet your hot. Most tourist resorts have in-house first aid and/or house doctors.
+                <p></p>Exercise caution when diving, snorkeling and swimming. Follow correct procedure, use proper equipment and follow any directions given by instructors.
+                <p></p>Being cautious and sensible is what makes a safe holiday.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content10')">Currency</div>
+        <div id="content10" class="content">
+            <p>The local currency is the Rufiyaa. A Rufiyaa is 100 Laari. The Rufiyaa is in denominations of 1000, 500, 100, 50, 20, 10 and 5 Rufiyaa notes, 1 and 2 Rufiyaa coins and 50, 25, 10, 5, 2 and 1 Laari coins. The current exchange rate is MRF 15.42 against the United States Dollar. All resorts, hotels and most major shops and restaurants are authorized money changers and can accept payment in most major currencies and by credit card.
+                <p></p>The Bank of Maldives Airport Branch located at the arivals terminal also offers money changing services. If you are in need of Rufiyaa while in Male’, banks would be the most convenient choice.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content11')">Visa Requirements</div>
+        <div id="content11" class="content">
+            <p>The Maldives is always ready to welcome guests. It is a very visitor-friendly country. All vistors to the Maldives are granted a 30-day tourist visas on arrival. This Assumes the possesion of valid travel documents. Please note, however, that a tourist visa does not allow the bearer to undertake any employment while in the Maldives.
+                <p></p>A Visitor should also posses a minimum of US$ 25.00 per day of stay in the Maldives. You maybe asked to produce evidence to the effect. A visitor may also be asked to produce a valid return ticket.
+                <p></p>Under normal circumstances, immigration formalities are fairly easy in the Maldives.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content12')">Vaccination</div>
+        <div id="content12" class="content">
+            <p>All visitors to the Maldives are required to posses a valid international certificate of vaccination against yellow fever if they are from, have stayed in, or have traveled through infected areas.
+                <p></p>Apart from this official requirement we have few recommendations to make.
+                <p></p>First of all we recommended that you consider possibilities in personal risk while abroad. If you are especially susceptible to various infections, travel-related ailments and other maladies, we suggest that you take necessary steps to safeguard yourself. If you are travelling to countries other than Maldives, you may also consider finding out official and other vaccination requirements of those countries and getting your shots before you travel. We strongly recommend that you see your personal physician who will be in the best position to advice you on your travel health.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content13')">What to pack?</div>
+        <div id="content13" class="content">
+            <p>Prior to your journey, do the following:
+                <p></p>Get a strong suitcase with a strong lock. A suitcase never travels Executive Class.
+                    <p>Pack your own suitcase and lock it. Pack all items that you may need en route in your hand luggage. Your suitcase or hand luggage should NOT caontain:
+                <li>Handguns, ammunition, explosives or weapons of any nature. A spear gun is considered a weapon.
+                    <li>Pornography.
+                        <li>Narcotics or psychotropic substances. If you use prescription medication, bring in your supply with a valid prescription.
+                            <li>Pamplets, flyers, booklets or litrature that promotes any religion.
+                                <li>Alcoholic beverages. Inbound passengers cannot bring in alcoholic beverages. Your resort, though, has a good selection of alcoholic beverages.
+                                    <p>Leave behind pets.
+                                        <p>A good choice of toilet items and cosmetics (including toothbrushes), is available locally. Bring anything you use which is of conventional make or design.
+                                            <p>As for electrical items, note that the local electricity grids supply a nominal 220 Volts AC at 50 Hz.
+                                                <p>I you plan to dive in the Maldives (highly recomended!), pack your own mask and regulator. Even though equipment is available at with your host, a mask that readily fits your face and a personal mouthpiece will add to your comfort.
+                                                    <p>Film and cameras are readily available for the amature and professional photographer If you use conventional film formats, bring your own.
+                                                        <p>The telephone system in use in the Maldives is arguably the best in the region. Bring your mobile phone if you have roaming enabled.
+                                                            <p>As for clothing, choose light tropical wear. swimsuits are required. for visits to inhabited islands, T-shirts and light trousers for men and light blouses and cotton skirts or pants for women are recomended. for formal functions, bring formal wear.
+                                                                <p>Should you have any further queries, ask your travel agent.
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content14')">Drinks and alcohol</div>
+        <div id="content14" class="content">
+            <p>There is a good selection of soft drinks available in the shops of the island, including some Coca-Cola products. At Maaenboodhoo, as in all the other inhabited islands of the Maldives, is strictly prohibit the use of any kind of alcoholic beverages. Alcohol is only available in the tourist resorts and on the liveaboards.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content15')">Protection of the Environment</div>
+        <div id="content15" class="content">
+            <p>The Maldives believes strongly in environment protection, with ample cause: The country is one of the most vulnerable!
+                <p></p>Air so pure. Seas teaming with diverse life. Nature at its very best. This is what the Maldives shares with its guests. And all of it is under threat. Your healp is much needed.
+                <p></p>When you are here, avoid harming of any of the natural vegetation. Apart from approved fishing, do not kill fish. Do not touch coral growth and marine life. Avoid littering. Note that the Maldives is very clean. Dispose of discard batteries, cans, polythene wrappings, etc. properly.
+                <p></p>Ask for and follow protection directives. We shall be duly grateful.
+                <p></p>Please enjoy your stay in a clean environment!
+                </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="heading" onclick="toggleContent('content16')">Electricity</div>
+        <div id="content16" class="content">
+            <p>On the island of Maaenboodhoo there are three generators operating 24 hours a day. However, a torch (flashlight) can be useful. Electricity supply is from 220V to 240V, 50 Hz AC. The sockets of RINDALI accept a plug with three-square pins.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                if (content.id === id) {
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
