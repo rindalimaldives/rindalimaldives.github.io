@@ -3,21 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Styled Menu Bar</title>
+        <style>
+            .nav-pills {
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .nav-link {
+                color: #010101; /* Text color */
+                font-family: 'Calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif; /* Font */
+                font-size: 16px;
+                padding: 10px px;
+                margin: 0 6px;
+                text-decoration: none;
+                border-radius: 1px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .nav-link:hover {
+                background-color: #000000; /* Hover background color */
+                color: #fff; /* Hover text color */
+            }
+    
+            .nav-link.active {
+                background-color: #cba135; /* Active link background color */
+                color: white; /* Active link text color */
+            }
+    
+            .nav-link.disabled {
+                color: #888; /* Disabled link color */
+                pointer-events: none; /* Disable click */
+            }
+        </style>
+    </head>
+    <body>
+    
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">About Us</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Rooms</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Transfer Options</a>
+    
+
+
+
+
+
+        
+    
     <title>Welcome to Rindali Maldives Maaenboodhoo</title>
+
     <style>
         body {
-            font-family: 'Calibri', sans-serif;
+            font-family: 'Calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #white;
         }
         header {
-            background: #b8860b; /* Dark Gold */
+            background: #cba135; /* Dark Gold */
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            font-family: 'Calibri', sans-serif;
+            font-family: 'Calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
         }
         .container {
             padding: 20px;
@@ -32,14 +86,14 @@
             margin: 20px 0;
             font-size: 18px;
             color: #555;
-            font-family: 'Calibri Light', sans-serif;
+            font-family: 'Calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
         }
         .book-now-button {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #b8860b; /* Dark Gold */
+            background: #cba135; /* Dark Gold */
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
@@ -49,7 +103,7 @@
             z-index: 10;
         }
         .book-now-button:hover {
-            background: #aa7d09; /* Slightly darker gold */
+            background: #e1930d; /* Slightly darker gold */
         }
         .buttons-container {
             display: flex;
@@ -58,7 +112,7 @@
             padding: 20px;
         }
         .buttons-container a {
-            background: #b8860b; /* Dark Gold */
+            background: #cba135; /* Dark Gold */
             color: #fff;
             padding: 15px 20px;
             margin: 10px 0;
@@ -67,7 +121,7 @@
             width: 200px;
             border-radius: 5px;
             font-size: 18px;
-            font-family: 'Calibri', sans-serif;
+            font-family: 'Calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
         }
         .buttons-container a:hover {
             background: #aa7d09; /* Slightly darker gold */
@@ -79,11 +133,11 @@
             margin-top: 20px;
         }
         footer {
-            background: #333;
+            background: #cba135;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
+            padding: 0px 0;
+            position:;
             width: 100%;
             bottom: 0;
         }
@@ -91,12 +145,12 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25d366; /* WhatsApp green */
+            background-color: #39ec7b00; /* WhatsApp green */
             color: white;
             border-radius: 50px;
             text-align: center;
             font-size: 24px;
-            box-shadow: 2px 2px 3px #999;
+            box-shadow: 2px 2px 3px #99999900;
             z-index: 100;
         }
         .whatsapp-float img {
@@ -117,7 +171,9 @@
         .location-map a:hover {
             text-decoration: underline;
         }
+        
     </style>
+    
 </head>
 <body>
     <header>
@@ -133,7 +189,9 @@
 
         <!-- Introduction Section -->
         <div class="intro">
-            <p>Our guest house offers a serene escape, blending comfort and elegance. Nestled in a prime location, we provide an authentic experience for travelers looking to enjoy a peaceful retreat.</p>
+            <p style="text-align: justify;">
+            <p>Welcome to Rindali Maldives Maaenboodhoo, an exclusive guest house on the island of Maaenboodhoo in Dhaalu Atoll, the central atoll of the Maldives. With 6 beautifully designed rooms, including five doubles and a spacious family room, Rindali can accommodate up to 14 guests. As the only hotel on the island, Rindali offers an intimate and unique experience, allowing you to immerse yourself in the tranquility of Maaenboodhoo. Located 178.8 km away from Male, the capital city, our bed and breakfast service ensures a comfortable and delightful stay. Enjoy the luxury of a private bikini beach reserved exclusively for Rindali guests, providing a serene spot to bask in the sun and relish the beauty of the Maldivian turquoise waters.</p>
+        
         </div>
 
         <!-- Buttons Section -->
@@ -149,14 +207,14 @@
     <!-- Location Map -->
     <div class="location-map">
         <h2>Our Location</h2>
-        <a href="https://maps.app.goo.gl/WmiKgmC9395pDBvMA" target="_blank">View on Google Maps</a>
-    </div>
+        
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.403923654354!2d72.96149597512564!3d2.6954842557735468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b47b9585da779d7%3A0x6b4bdc2702e06d1f!2sRindali%20Maldives%20Maaenboodhoo!5e0!3m2!1sen!2smv!4v1723834425820!5m2!1sen!2smv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <!-- Contact Details -->
     <div class="contact-details">
-        <p>Email: info@yourguesthouse.com</p>
-        <p>Phone: +9609680000</p>
-        <p>Address: 123 Guest House Lane, Your City, Country</p>
+        <p>Email: reservations@rindali.com</p>
+        <p>Phone: +(960)-9680000</p>
+        <p>Address: Hiyfaseyha Magu, Dh. Maaenboodhoo, Maldives</p>
     </div>
 
     <footer>
